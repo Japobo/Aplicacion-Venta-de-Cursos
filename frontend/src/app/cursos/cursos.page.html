@@ -16,11 +16,13 @@
             <ion-card-title><b>{{curso.titulo}} </b> </ion-card-title>
             <ion-card-subtitle> {{curso.subtitulo}} </ion-card-subtitle>
           </ion-card-header>
-          <ion-card-content>
+          <ion-card-content class="ion-no-padding">
             <img
               [src]=" curso.imagen && curso.imagen.formats.small.url ? 'http://localhost:1337' + curso.imagen.formats.small.url : 'http://www.uh.edu/pharmacy/_images/directory-staff/no-image-available.jpg'"
               alt=""
             />
+          </ion-card-content>
+          <ion-card-content>
             <ion-text color="dark">
               {{curso.descripcion}}
             </ion-text>
