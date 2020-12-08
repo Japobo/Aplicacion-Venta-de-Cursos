@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "temas",
+  "info": {
+    "name": "Temas",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "titulo": {
+      "type": "string"
+    },
+    "subtitulo": {
+      "type": "text"
+    },
+    "curso": {
+      "via": "temas",
+      "model": "cursos"
+    },
+    "lecciones": {
+      "collection": "lecciones",
+      "via": "tema"
+    }
+  }
+}

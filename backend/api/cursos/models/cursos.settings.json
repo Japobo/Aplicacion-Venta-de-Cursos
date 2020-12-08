@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cursos",
+  "info": {
+    "name": "Cursos",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "titulo": {
+      "type": "string"
+    },
+    "precio": {
+      "type": "decimal"
+    },
+    "duracion": {
+      "type": "string"
+    },
+    "inicio": {
+      "type": "date"
+    },
+    "fin": {
+      "type": "date"
+    },
+    "descripcion": {
+      "type": "richtext"
+    },
+    "subtitulo": {
+      "type": "text"
+    },
+    "temas": {
+      "collection": "temas",
+      "via": "curso"
+    },
+    "imagen": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "inscripciones": {
+      "via": "curso",
+      "collection": "inscripciones"
+    }
+  }
+}

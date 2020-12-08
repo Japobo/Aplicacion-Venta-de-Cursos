@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/inscripciones",
+      "handler": "inscripciones.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/inscripciones/count",
+      "handler": "inscripciones.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/inscripciones/:id",
+      "handler": "inscripciones.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/inscripciones",
+      "handler": "inscripciones.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/inscripciones/:id",
+      "handler": "inscripciones.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/inscripciones/:id",
+      "handler": "inscripciones.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

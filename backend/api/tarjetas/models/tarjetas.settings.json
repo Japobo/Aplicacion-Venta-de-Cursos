@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tarjetas",
+  "info": {
+    "name": "Tarjetas",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nombreentarjeta": {
+      "type": "string"
+    },
+    "alias": {
+      "type": "string"
+    },
+    "numero": {
+      "type": "biginteger"
+    },
+    "caducidad": {
+      "type": "string"
+    },
+    "cvv": {
+      "type": "integer"
+    },
+    "users_permissions_user": {
+      "via": "tarjetas",
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}

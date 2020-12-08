@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lecciones",
+  "info": {
+    "name": "Lecciones",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "titulo": {
+      "type": "string"
+    },
+    "subtitulo": {
+      "type": "text"
+    },
+    "contenido": {
+      "type": "richtext"
+    },
+    "tema": {
+      "via": "lecciones",
+      "model": "temas"
+    }
+  }
+}

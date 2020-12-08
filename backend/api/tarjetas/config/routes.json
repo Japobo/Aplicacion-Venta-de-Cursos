@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/tarjetas",
+      "handler": "tarjetas.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/tarjetas/count",
+      "handler": "tarjetas.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/tarjetas/:id",
+      "handler": "tarjetas.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/tarjetas",
+      "handler": "tarjetas.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/tarjetas/:id",
+      "handler": "tarjetas.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/tarjetas/:id",
+      "handler": "tarjetas.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+<ion-app>
+  <ion-menu slot="start" menuId="first" contentId="main">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-menu-toggle>
+          <ion-item
+            [routerLink]="['/cursos']"
+            routerLinkActive="router-link-active">
+            <ion-icon name="school" slot="start" color="black"></ion-icon>
+            <ion-label> Cursos </ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item
+            [routerLink]="['/curso-form']"
+            routerLinkActive="router-link-active"
+          >
+            <ion-icon name="reader" slot="start" color="black"></ion-icon>
+            <label>Formulario</label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-item>Menu Item</ion-item>
+        <ion-item>Menu Item</ion-item>
+        <ion-item>Menu Item</ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <ion-router-outlet id="main"></ion-router-outlet>
+</ion-app>

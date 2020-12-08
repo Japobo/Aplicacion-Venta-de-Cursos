@@ -1,0 +1,97 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/curso"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Crear un nuevo curso</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" size-md="4" offset-md="4">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title
+              >{{editing ? 'Actualizar': 'Crear'}} curso</ion-card-title
+            >
+          </ion-card-header>
+          <ion-card-content>
+            <ion-item>
+              <ion-label position="floating">Título</ion-label>
+              <ion-input #titulo [(ngModel)]="curso.titulo"></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label position="floating">Subtítulo</ion-label>
+              <ion-input #subtitulo [(ngModel)]="curso.subtitulo"></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label type="number" position="floating">Precio</ion-label>
+              <ion-input #precio [(ngModel)]="curso.precio"></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label position="floating">Duración</ion-label>
+              <ion-input #duracion [(ngModel)]="curso.duracion"></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>Fecha de Inicio</ion-label>
+              <ion-datetime
+                [(ngModel)]="curso.inicio"
+                value="2020-11-29"
+                min="2020-11"
+                max="2050"
+                displayFormat="DDD. DD MMM, YYYY"
+                dayShortNames="Lunes, Martes, Miércoles, Jueves, Viernes, Sábado, Domingo"
+                monthShortNames="Ene, Feb, Mar, Abr, May, Jun, Jul, Ago, Sep, Oct, Nov, Dic"
+                #inicio
+              >
+              </ion-datetime>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>Fecha de Fin</ion-label>
+              <ion-datetime
+                [(ngModel)]="curso.fin"
+                value="2020-11-29"
+                min="2020-11"
+                max="2050"
+                displayFormat="DDD. DD MMM, YYYY"
+                dayShortNames="Lunes, Martes, Miércoles, Jueves, Viernes, Sábado, Domingo"
+                monthShortNames="Ene, Feb, Mar, Abr, May, Jun, Jul, Ago, Sep, Oct, Nov, Dic"
+                #fin
+              ></ion-datetime>
+            </ion-item>
+
+            <ion-item>
+              <ion-label
+                position="stacked"
+                style="font-size: 20px; font-weight: bold"
+                >Descripción</ion-label
+              >
+              <ion-textarea
+                spellcheck="true"
+                auto-grow="true"
+                rows="3"
+                #descripcion
+                [(ngModel)]="curso.descripcion"
+              ></ion-textarea>
+            </ion-item>
+            <div>
+              <ion-button
+                color="dark"
+                expand="full"
+                (click)="editing ? updateCurso(): saveCurso()"
+                >{{editing ? 'Actualizar': 'Crear'}}</ion-button
+              >
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

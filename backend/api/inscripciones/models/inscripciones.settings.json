@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "inscripciones",
+  "info": {
+    "name": "Inscripciones",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "pagada": {
+      "type": "boolean"
+    },
+    "curso": {
+      "model": "cursos",
+      "via": "inscripciones"
+    },
+    "usuario": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "inscripciones"
+    }
+  }
+}
