@@ -1,8 +1,13 @@
 <ion-app>
   <ion-menu slot="start" menuId="first" contentId="main">
     <ion-header>
-      <ion-toolbar color="primary">
-        <ion-title>Menu</ion-title>
+      <ion-toolbar color="dark">
+        <div class="ion-activatable ripple-parent">
+          <ion-title
+            >Menu
+          </ion-title>
+          <ion-ripple-effect></ion-ripple-effect>
+        </div>
       </ion-toolbar>
     </ion-header>
     <ion-content>
@@ -10,7 +15,9 @@
         <ion-menu-toggle>
           <ion-item
             [routerLink]="['/cursos']"
-            routerLinkActive="router-link-active">
+            routerLinkActive="router-link-active"
+            lines="full"
+          >
             <ion-icon name="school" slot="start" color="black"></ion-icon>
             <ion-label> Cursos </ion-label>
           </ion-item>
@@ -19,6 +26,7 @@
           <ion-item
             [routerLink]="['/curso-form']"
             routerLinkActive="router-link-active"
+            lines="full"
           >
             <ion-icon name="reader" slot="start" color="black"></ion-icon>
             <label>Formulario</label>
