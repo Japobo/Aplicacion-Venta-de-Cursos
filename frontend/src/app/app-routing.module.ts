@@ -32,6 +32,10 @@ const routes: Routes = [
         (m) => m.CursoFormPageModule
       ),
   },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
 ];
 
 @NgModule({
