@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/curso"></ion-back-button>
+      <ion-back-button text="Volver"></ion-back-button>
     </ion-buttons>
     <ion-title>Crear un nuevo curso</ion-title>
   </ion-toolbar>
@@ -12,7 +12,7 @@
     <ion-row>
       <ion-col size="12" size-md="4" offset-md="4">
         <ion-card>
-          <ion-card-header>
+          <ion-card-header color="primary">
             <ion-card-title
               >{{editing ? 'Actualizar': 'Crear'}} curso</ion-card-title
             >
@@ -63,6 +63,7 @@
                 displayFormat="DDD. DD MMM, YYYY"
                 dayShortNames="Lunes, Martes, Miércoles, Jueves, Viernes, Sábado, Domingo"
                 monthShortNames="Ene, Feb, Mar, Abr, May, Jun, Jul, Ago, Sep, Oct, Nov, Dic"
+                done-text="Hecho"
                 #fin
               ></ion-datetime>
             </ion-item>
@@ -83,7 +84,7 @@
             </ion-item>
             <div>
               <ion-button
-                color="dark"
+                color="primary"
                 expand="full"
                 (click)="editing ? updateCurso(): saveCurso()"
                 >{{editing ? 'Actualizar': 'Crear'}}</ion-button
